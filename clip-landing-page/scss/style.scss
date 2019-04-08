@@ -1,0 +1,184 @@
+/*=============================
+  larger screens - webpage
+===============================*/
+/* Grid */
+
+body {
+  background-color: #F9F4F1;
+  background-image: url("https://raw.githubusercontent.com/sahkho/clip-landing-page/master/placeholder.png");
+  background-repeat: no-repeat;
+  background-position:100% 0;
+  background-size:40%;
+  min-width:100%;
+	min-height: 100vh;
+}
+
+.wrapper{
+	display: grid;
+	grid-template-columns: 0.5fr 1.5fr 0.5fr 2fr;
+  grid-template-rows: 5fr;
+  grid-template-areas: ". header . pic"
+                       ". content . pic"
+                       ". . . pic"
+                       " . content_2 . pic"
+                       " . content_3 . pic";
+}
+
+.content {
+  grid-area: content;
+  position: relative;
+  padding-top: 25px;
+  padding-left:50px;
+  padding-bottom:0;
+  line-height:0;
+}
+.p {
+  padding-bottom: 0.15em;
+  margin:0;
+}
+
+.content_2 {
+  grid-area: content_2;
+  position:relative;
+  padding-top:0; 
+  padding-left:50px;
+}
+.content_3 {
+  grid-area: content_3;
+  position:relative;
+  padding-top:0; 
+  padding-left:50px;
+  
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  padding-left:50px;
+  padding-top: 10px;
+}
+
+.top{
+  grid-area:top;
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+.pic{
+  grid-area:pic;
+  background-size:cover; 
+}
+.pic a{
+  color: #FFFFFF;
+  text-decoration:none;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+/* for header */
+#header {
+width: 537px;
+height: 112px;
+left: 183px;
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 900;
+line-height: 56px;
+font-size: 48px;
+color: #183635;
+}
+
+/* for subtitle */
+#subtitle {
+  width: 507px;
+  height: 75px;
+  left: 185px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: #6B6B6B;
+}
+
+#retail{
+  font-family: Work Sans;
+  font-style: normal;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-align:right;
+  padding-right:25px;
+}
+#get-retail{
+  color:#222222;
+}
+
+/* get access button
+text */
+#get-access {
+font-family: Work Sans;
+font-style: normal;
+font-weight: normal;
+line-height: 24px;
+font-size: 15px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #183635;
+}
+
+/* small caps*/
+#small-caps {
+  color: #c4c4c4;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+}
+
+/* hover color */
+#hover {
+  background: #EE7367;
+}
+
+#hover:hover {
+  background: #99706B;
+} 
+
+
+/* for button */
+.button {
+  display: inline-block;
+  width: 129px;
+  height: 45px;
+  padding-left: 100px;
+  right: 0px;
+  top: 9px;
+  z-index: 1000;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: -0.02em;  
+  color: #183635;
+  padding: 12px 24px 12px 24px;
+  
+}
+
+
+/*=============================
+  default grid set up -> mobile
+===============================*/
+
+@media only screen and (min-width:600px){
+  body{
+    grid-template-columns: 120px 1fr; 
+    grid-template-areas: "content main";
+  }
+  .content{
+    justify_items:center;
+  }
+}
